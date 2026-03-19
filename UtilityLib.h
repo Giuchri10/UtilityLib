@@ -13,4 +13,14 @@ std::string cbit(long long int dec){
     return bin;
 }
 
+bool is_float(auto inp){
+    std::string fl = typeid(inp).name();
+    if (fl == "d" || fl == "f"){
+        return true;
+    }
+    else{
+        if (inp/2 == (int)inp%2) return true;
+        else return false;
+    }
+}
 #endif
